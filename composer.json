@@ -1,7 +1,7 @@
 {
-	"name": "baraja-core/template",
-	"description": "This is a template package.",
-	"homepage": "https://github.com/baraja-core/template",
+	"name": "baraja-core/shop-brand",
+	"description": "Product brand.",
+	"homepage": "https://github.com/baraja-core/shop-brand",
 	"authors": [
 		{
 			"name": "Jan Barášek",
@@ -9,7 +9,8 @@
 		}
 	],
 	"require": {
-		"php": "^8.0"
+		"php": "^8.0",
+		"baraja-core/country": "^1.0"
 	},
 	"require-dev": {
 		"phpstan/phpstan": "^1.0",

@@ -1,4 +1,4 @@
-Template
-========
+Shop Brand
+==========
 
-This is a template package.
+Product brand entity.
