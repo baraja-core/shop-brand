@@ -26,6 +26,9 @@ class Brand
 	#[ORM\GeneratedValue]
 	protected int $id;
 
+	#[ORM\Column(type: 'translate', nullable: true)]
+	protected ?Translation $description = null;
+
 	#[ORM\Column(type: 'string')]
 	private string $name;
 
@@ -37,9 +40,6 @@ class Brand
 
 	#[ORM\Column(type: 'string', length: 128, nullable: true)]
 	private ?string $iconPath = null;
-
-	#[ORM\Column(type: 'translate', nullable: true)]
-	private ?Translation $description = null;
 
 	#[ORM\Column(type: 'integer', options: ['unsigned' => true])]
 	private int $position = 0;
