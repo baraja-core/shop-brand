@@ -7,6 +7,7 @@ namespace Baraja\Shop\Brand\Entity;
 
 use Baraja\Country\Entity\Country;
 use Baraja\EcommerceStandard\DTO\BrandInterface;
+use Baraja\EcommerceStandard\DTO\CountryInterface;
 use Baraja\Localization\TranslateObject;
 use Baraja\Localization\Translation;
 use Doctrine\ORM\Mapping as ORM;
@@ -58,7 +59,7 @@ class Brand implements BrandInterface
 	private bool $deleted = false;
 
 	#[ORM\ManyToOne(targetEntity: Country::class)]
-	private ?Country $country = null;
+	private ?CountryInterface $country = null;
 
 
 	public function __construct(string $name, string $code, string $slug)
@@ -189,13 +190,13 @@ class Brand implements BrandInterface
 	}
 
 
-	public function getCountry(): ?Country
+	public function getCountry(): ?CountryInterface
 	{
 		return $this->country;
 	}
 
 
-	public function setCountry(?Country $country): void
+	public function setCountry(?CountryInterface $country): void
 	{
 		$this->country = $country;
 	}
