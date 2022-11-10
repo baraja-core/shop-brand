@@ -6,6 +6,7 @@ namespace Baraja\Shop\Brand\Entity;
 
 
 use Baraja\Country\Entity\Country;
+use Baraja\EcommerceStandard\DTO\BrandInterface;
 use Baraja\Localization\TranslateObject;
 use Baraja\Localization\Translation;
 use Doctrine\ORM\Mapping as ORM;
@@ -17,7 +18,7 @@ use Nette\Utils\Strings;
  */
 #[ORM\Entity]
 #[ORM\Table(name: 'shop__brand')]
-class Brand
+class Brand implements BrandInterface
 {
 	use TranslateObject;
 
@@ -83,6 +84,12 @@ class Brand
 	public function setName(string $name): void
 	{
 		$this->name = $name;
+	}
+
+
+	public function getRealDescription(): string
+	{
+		return (string) $this->getDescription();
 	}
 
 
